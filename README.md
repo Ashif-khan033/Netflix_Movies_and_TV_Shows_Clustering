@@ -2,43 +2,55 @@
 
 ![68747470733a2f2f6d656469612e74656e6f722e636f6d2f52667978394f6b5249333841414141432f6e6574666c69782d6e6574666c69782d737461727475702e676966](https://github.com/Ashif-khan033/Netflix_Movies_and_TV_Shows_Clustering/assets/117459380/4616711c-0e95-4ae9-ac48-4deb07b27013)
 
-This repository contains the code and resources for analyzing the Netflix dataset of movies and TV shows until 2019. The dataset was sourced from the third-party search engine Flixable and includes information about various attributes of the content available on Netflix. The goal of this project is to uncover insights, trends, and patterns within the dataset and develop a content-based recommender system using natural language processing (NLP) techniques.
+To ensure an optimal user experience and prevent subscriber churn, it is essential for Netflix, the world's leading online streaming service provider with over 220 million subscribers as of 2022, to effectively cluster the shows on their platform.
 
-# Problem Statement
+**Table of Content**
 
-The specific tasks to be performed in this project include:
+1. Problem Statement
+2. Objective
+3. Dataset
+4. Data Pipeline
+5. Project Structure
+6. Conclusion
 
-Exploratory Data Analysis (EDA): Cleaned the data, unnested the Netflix content and tackled the null/missing values and conduct a thorough analysis of the dataset to uncover trends, patterns, and correlations among different attributes.
-Understanding Content Availability: Determine the types of content available in different countries and identify any variations or preferences.
-Analyzing Netflix's Focus: Investigate whether Netflix has been increasingly focusing on TV shows rather than movies in recent years.
-Clustering Similar Content: Utilize text-based features to cluster similar content, enabling the development of a content-based recommender system.
+**Problem Statement**
 
-# Project Summary
+The goal of this project is to analyze the Netflix catalog of movies and TV shows, which was sourced from the third-party search engine Flixable, and group them into relevant clusters. This will aid in enhancing the user experience and prevent subscriber churn for the world's largest online streaming service provider, Netflix, which currently boasts over 220 million subscribers as of 2022-Q2. The dataset, which includes movies and TV shows as of 2019, will be analyzed to uncover new insights and trends in the rapidly growing world of streaming entertainment.
 
-The aim of this project is to analyze the Netflix dataset, which includes information on movies and TV shows available on the platform until 2019. With over 220 million subscribers, Netflix is the world's largest online streaming service provider. By analyzing and clustering the content, we can enhance the user experience through a personalized recommendation system, potentially reducing subscriber churn.
+**Objective**
 
-The project follows a step-by-step process, as outlined below:
+The objective of the project was to analyze the Netflix dataset and identify trends and patterns in the content that is available on the platform. The goal was to gain insights that could be used to improve the user experience and make recommendations for future content.
 
-Handling Missing Values: Address any null or missing values present in the dataset.
-Dealing with Nested Columns: Process nested columns such as director, cast, listed_in, and country to facilitate clear visualization and analysis.
-Rating Binning: Categorize ratings into appropriate categories, including adult, children's, family-friendly, and not rated content.
-Exploratory Data Analysis (EDA): Perform in-depth EDA on various attributes, uncovering valuable findings to aid in churn prevention.
-Cluster Creation: Create clusters using attributes such as director, cast, country, genre, rating, and description. Tokenize, preprocess, and vectorize the attribute values using TF-IDF vectorizer.
-Dimensionality Reduction: Reduce the dimensionality of the dataset using Principal Component Analysis (PCA) to improve performance.
-Clustering Algorithms: Employ K-Means Clustering and Agglomerative Hierarchical Clustering algorithms to construct two distinct types of clusters. Determine the optimal number of clusters using methods like the Elbow method, Silhouette score, and Dendrogram.
-Content-Based Recommender System: Develop a content-based recommender system using the cosine similarity matrix. This system analyzes the user's watched shows and generates personalized recommendations to enhance their experience.
+**Data Pipeline**
 
-# Deployment: Enhancing Your Netflix Experience!
+1. Know Your Data: The first step in this project was to examine the various features of the dataset, understand the structure of the data and identify any patterns 
+   or trends. We looked at the shape of the data, the data types of each feature, and a statistical summary.
+2. Exploratory Data Analysis: We conducted an exploratory analysis of the data to identify patterns and dependencies, and to draw conclusions that would be useful 
+   for further processing.
+3. Data Cleaning: We checked for duplicated values in the dataset and then addressed any null values and outliers by imputing empty strings and dropping some of the 
+   null rows.
+4. Textual Data Preprocessing: We used techniques such as stop word removal, punctuation removal, conversion to lowercase, stemming, tokenization, and word 
+   vectorization to prepare the textual data for clustering. We also used Principal Component Analysis (PCA) to handle the curse of dimensionality.
+5. Cluster Implementation: We used K-Means and Agglomerative Hierarchical clustering algorithms to cluster the movies and determine the optimal number of clusters.
+6. Content-Based Recommendation System: We built a content-based recommendation system using the similarity matrix obtained from cosine similarity, which will 
+   provide the user with 10 recommendations based on the type of movie/show they have watched.
 
-We've taken this project one step further by deploying our Netflix recommendation system for a seamless user experience. With our deployed system, you can now unlock personalized content suggestions right at your fingertips. Here's how it works:
+**Conclusion**
 
-Local Server Deployment: Using Streamlit, we've built a user-friendly interface that runs on your local server. Simply fire up the application, and you'll find a sleek interface awaiting your input.
+The conclusion of the project was that it was able to identify a number of trends and patterns in the Netflix dataset. These trends and patterns could be used to improve the user experience and make recommendations for future content.
 
-Live User Interaction: Thanks to the power of Hugging Face, our recommendation system is live and ready to interact with you. Discover new shows and movies tailored to your taste, as our cutting-edge algorithm analyzes your watch history to provide spot-on suggestions.
-
-Unleash the Power of Content-Based Recommendations: Say goodbye to aimlessly scrolling through endless options. Our content-based recommender system harnesses the potential of natural language processing (NLP) to match your preferences with similar shows and movies in the Netflix dataset.
-
-User-Centric Approach: We've prioritized your satisfaction by designing a system that understands your unique viewing habits. Whether you're a fan of crime dramas, romantic comedies, or mind-bending documentaries, our recommendation engine delivers personalized content just for you.
-
-Don't settle for mediocre suggestions or waste time on subpar shows. Elevate your Netflix experience with our deployed recommendation system. Get ready to embark on a binge-watching journey like no other!
-
+- There were approximately 7787 records and 11 attributes in the dataset.
+- We started by working on the missing values in the dataset and conducting exploratory data analysis (EDA).
+- It was discovered that Netflix hosts more movies than television shows on its platform, and the total number of shows added to Netflix is expanding at an 
+  exponential rate. Additionally, most of the shows were made in the United States.
+- The attributes were chosen as the basis for the clustering of the data: cast, country, genre, director, rating, and description The TFIDF vectorizer was 
+  used to tokenize, preprocess, and vectorize the values in these attributes.
+- 10000 attributes in total were created by TFIDF vectorization.
+- The problem of dimensionality was dealt with through the use of Principal Component Analysis (PCA). Because 3000 components were able to account for more than 
+  80% of the variance, the total number of components was limited to 3000.
+- Utilizing the K-Means Clustering algorithm, we first constructed clusters, and the optimal number of clusters was determined to be 6. The elbow method and 
+  Silhouette score analysis were used to get this.
+- The Agglomerative clustering algorithm was then used to create clusters, and the optimal number of clusters was determined to be 7. This was obtained after 
+  visualizing the dendrogram.
+- The similarity matrix generated by applying cosine similarity was used to construct a content-based recommender system. The user will receive ten 
+  recommendations from this recommender system based on the type of show they watched.
