@@ -10,8 +10,7 @@ To ensure an optimal user experience and prevent subscriber churn, it is essenti
 2. Objective
 3. Dataset
 4. Data Pipeline
-5. Project Structure
-6. Conclusion
+5. Conclusion
 
 **Problem Statement**
 
